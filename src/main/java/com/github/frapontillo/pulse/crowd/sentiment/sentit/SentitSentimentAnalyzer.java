@@ -50,6 +50,10 @@ public class SentitSentimentAnalyzer extends IPlugin<Message, Message, VoidConfi
         return PLUGIN_NAME;
     }
 
+    @Override public IPlugin<Message, Message, VoidConfig> getInstance() {
+        return new SentitSentimentAnalyzer();
+    }
+
     @Override public VoidConfig getNewParameter() {
         return new VoidConfig();
     }
